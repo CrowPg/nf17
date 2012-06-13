@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Modifier des membres</title>
+<!--                       CSS                       -->
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+</head>
+<body id="login">
+<div id="login-wrapper" class="png_bg">
+  <div id="login-top">
+    <h1>Liste des membres de l'association</h1>
+    <!-- Logo (221px width) -->
+    <img id="logo" src="resources/images/logo_bde.png" alt="UTC logo" /></div>
+  <!-- End #logn-top -->
+		<div id="login-content">
+			<h2>Modifier un membre dans le BDE.</h2>
+			<form action="#" method="get">
+			<p>
+				<label>ID d'étudiant</label>
+				<input class="text-input" name="id" type="text" />
+			</p>
+			<div class="clear"></div>
+			<p>
+				<label>Nom d'association(*)</label>
+				<input class="text-input" name="nom" type="text" />
+			</p>
+			<div class="clear"></div>
+			<p>
+				<label>Date début</label>
+				<input class="text-input" name="date_debut" type="text" />
+			</p>
+			<div class="clear"></div>
+			<p>
+				<label>Date fin</label>
+				<input class="text-input" name="date_fin" type="text" />
+			</p>
+			<div class="clear"></div>
+			<p>
+				<label>Type</label>
+			    <select name="type">
+					<option value="membre">membre</option>
+					<option value="president">président</option>
+					<option value="secretaire">secrétaire</option>
+					<option value="tresorier">trésorier</option>
+				</select>
+			</p>
+			<div class="clear"></div>
+			<p>
+				<input class="button" type="submit" value="Ajouter" />
+			</p>
+			</form>
+		</div>
+		<p>
+			<a class="button" href="login_bde.html">Return to main page</a>
+		</p>
+  <!-- End #login-content -->
+</div>
+<!-- End #login-wrapper -->
+</body>
+</html>

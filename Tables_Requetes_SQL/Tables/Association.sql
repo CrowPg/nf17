@@ -1,0 +1,3 @@
+CREATE TABLE Association(
+	nom VARCHAR(30) PRIMARY KEY
+);

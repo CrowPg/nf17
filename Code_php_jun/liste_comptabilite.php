@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Liste des comptabilités</title>
+<!--                       CSS                       -->
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen" />
+</head>
+<body id="login">
+<div id="login-wrapper" class="png_bg">
+  <div id="login-top">
+    <h1>Liste des comptabilités</h1>
+    <!-- Logo (221px width) -->
+    <img id="logo" src="resources/images/logo_bde.png" alt="UTC logo" /></div>
+  <!-- End #logn-top -->
+  <div class="tab-content default-tab" id="tab1">
+          <!-- This is the target div. id must match the href of this div's tab -->
+		  <h2> Voilà la liste des comptabilités dans la association.</h2>
+          <table><center>
+            <thead>
+              <tr>
+                <th>Depense/Reçu</th>
+				<th>Date début</th>
+				<th>Date fin</th>
+				<th>Solde</th>			
+              </tr>
+            </thead>
+            <tbody>
+			<?php
+				include "connect.php";
+				$vConn = fConnect();
+				$vSql ="";
+				$vQuery=pg_query($vConn, $vSql);
+				while ($vResult = pg_fetch_array($vQuery)) {
+					echo "<tr>";
+					echo "<td>$vResult[0]</td>";
+					echo "<td>$vResult[1]</td>";
+					echo "</tr>";
+				}
+			?>
+              <tr>
+                <td>dépenses</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>dépenses</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>dépenses</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>reçu</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>reçu</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>reçu</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>reçu</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+              <tr>
+                <td>dépenses</td>
+				<td>20110101</td>
+				<td>20110201</td>
+				<td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+		<p>
+			<a class="button" href="login_bde.html">Return to main page</a>
+		</p>
+  <!-- End #login-content -->
+</div>
+<!-- End #login-wrapper -->
+</body>
+</html>
