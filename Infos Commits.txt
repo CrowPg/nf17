@@ -1,0 +1,11 @@
+Commit n°2 : 13 juin 12:56
+
+Ajout d'une colonne soldeCourant dans Comptabilite (Requête SQL modifiée, table modifiée.)
+
+Requêtes SQL : CREATE TRIGGER pour mettre à jour la colonne soldeCourant de Comptabilite.
+
+
+-----------------
+
+
+C
