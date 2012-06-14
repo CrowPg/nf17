@@ -1,10 +1,9 @@
-CREATE OR REPLACE TRIGGER Maj_Compta_Recette
+CREATE TRIGGER Maj_Compta_Recette
 AFTER INSERT ON Recette
 FOR EACH ROW
 DECLARE
 	fin_exercice EXCEPTION;
-	date_fin_exercice DATE;
-	
+	date_fin_exercice DATE;	
 BEGIN
 	UPDATE Comptabilite c
 		SET c.soldeCourant = c.soldeCourant + :new.montant
@@ -17,9 +16,12 @@ BEGIN
 	END IF;
 END;
 
-CREATE OR REPLACE TRIGGER Maj_Compta_Service
+----------------
+
+CREATE TRIGGER Maj_Compta_Service
 AFTER INSERT ON Service
 FOR EACH ROW
+
 DECLARE
 	fin_exercice EXCEPTION;
 	date_fin_exercice DATE;
@@ -36,9 +38,12 @@ BEGIN
 	END IF;
 END;
 
-CREATE OR REPLACE TRIGGER Maj_Compta_Materiel
+----------------
+
+CREATE TRIGGER Maj_Compta_Materiel
 AFTER INSERT ON Materiel
 FOR EACH ROW
+
 DECLARE
 	fin_exercice EXCEPTION;
 	date_fin_exercice DATE;
